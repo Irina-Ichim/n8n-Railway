@@ -18,6 +18,5 @@ ENV N8N_USER_FOLDER=/home/node/.n8n
 # Exponer puerto por defecto
 EXPOSE 5678
 
-# Script de inicio - Railway pasa PORT como variable de entorno
-ENV PORT=5678
-CMD ["sh", "-c", "n8n start --port=$PORT"]
+# n8n usa N8N_PORT para el puerto
+CMD ["n8n", "start"]
